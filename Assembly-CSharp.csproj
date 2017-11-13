@@ -51,42 +51,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Example.cs" />
-     <Compile Include="Assets\HitEffect.cs" />
-     <Compile Include="Assets\IHitEffect.cs" />
-     <Compile Include="Assets\KeypadWeaponGUI.cs" />
-     <Compile Include="Assets\ObjectTrail.cs" />
-     <Compile Include="Assets\Screenshot.cs" />
+     <Compile Include="Assets\Lifetime.cs" />
      <Compile Include="Assets\Scripts\Damageable.cs" />
      <Compile Include="Assets\Scripts\Drive.cs" />
      <Compile Include="Assets\Scripts\DriveController.cs" />
      <Compile Include="Assets\Scripts\Follower.cs" />
+     <Compile Include="Assets\Scripts\FragmentExplosion.cs" />
      <Compile Include="Assets\Scripts\Helper.cs" />
+     <Compile Include="Assets\Scripts\HitEffect.cs" />
      <Compile Include="Assets\Scripts\IDamageable.cs" />
      <Compile Include="Assets\Scripts\IDevice.cs" />
      <Compile Include="Assets\Scripts\IDrive.cs" />
+     <Compile Include="Assets\Scripts\IHitEffect.cs" />
+     <Compile Include="Assets\Scripts\IOnObjectDestroyed.cs" />
      <Compile Include="Assets\Scripts\IWeapon.cs" />
+     <Compile Include="Assets\Scripts\KeypadWeaponGUI.cs" />
+     <Compile Include="Assets\Scripts\ObjectTrail.cs" />
      <Compile Include="Assets\Scripts\Physics.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Polygon.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Rectangle.cs" />
+     <Compile Include="Assets\Scripts\Screenshot.cs" />
+     <Compile Include="Assets\Scripts\SimpleHit.cs" />
+     <Compile Include="Assets\Scripts\SimpleTrail.cs" />
+     <Compile Include="Assets\Scripts\SpriteFade.cs" />
+     <Compile Include="Assets\Scripts\SpriteScale.cs" />
+     <Compile Include="Assets\Scripts\SpriteVibrate.cs" />
      <Compile Include="Assets\Scripts\Starship.cs" />
+     <Compile Include="Assets\Scripts\Swivel.cs" />
      <Compile Include="Assets\Scripts\Tags.cs" />
      <Compile Include="Assets\Scripts\Turret_Mouse.cs" />
      <Compile Include="Assets\Scripts\VideoCaptureExample.cs" />
      <Compile Include="Assets\Scripts\Weapon.cs" />
      <Compile Include="Assets\Scripts\WeaponController.cs" />
      <Compile Include="Assets\Scripts\Weapons.cs" />
-     <Compile Include="Assets\SerializableDictionary.cs" />
-     <Compile Include="Assets\SerializableDictionaryDrawer.cs" />
-     <Compile Include="Assets\SerializableDictionaryDrawerImplementations.cs" />
-     <Compile Include="Assets\SerializableDictionaryImplementations.cs" />
-     <Compile Include="Assets\SerializedPropertyExtension.cs" />
-     <Compile Include="Assets\SimpleHit.cs" />
-     <Compile Include="Assets\SimpleTrail.cs" />
-     <Compile Include="Assets\SpriteFade.cs" />
-     <Compile Include="Assets\SpriteVibrate.cs" />
+     <Compile Include="Assets\Scripts\WeaponTimer.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

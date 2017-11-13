@@ -39,7 +39,7 @@ public class Drive : MonoBehaviour, IDrive, IDevice
         Vector3 pos = d.GetPosition();
         
         Vector3 force_adjusted = Helper.RotatePointAroundOrigin(d.GetForce(), new Vector3(0, 0, z));
-        print("Force adjusted: " + force_adjusted);
+        //print("Force adjusted: " + force_adjusted);
         rb.AddForceAtPosition(force_adjusted, pos);
         Vector3 velocity_exhaust = Helper.RotatePointAroundOrigin(exhaustVelocity, new Vector3(0, 0, z + 180));
         Transform exhaustType = d.GetExhaust();

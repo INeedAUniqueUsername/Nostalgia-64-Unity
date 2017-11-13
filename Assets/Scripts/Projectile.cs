@@ -19,18 +19,23 @@ public class Projectile : MonoBehaviour {
         } else
             lifetime--;
 	}
+    void OnCollisionEnter2D(Collision2D col) {
+        Physics2D.IgnoreCollision(col.collider, col.otherCollider, true);
+    }
     void OnTriggerEnter2D(Collider2D other) {
-        
+        if(lifetime == 0) {
+            return;
+        }
         if (!Helper.isRelated(owner, other.transform) && !other.isTrigger) {
-            if (lifetime > 1)
-                lifetime = 1;
             IDamageable damageable = other.GetComponent<IDamageable>();
-            if (damageable != null)
+            if (damageable != null) {
                 damageable.Damage(damage);
+            }
             IHitEffect hit = gameObject.GetComponent<IHitEffect>();
             if (hit != null) {
-                hit.CreateEffect(other.bounds.ClosestPoint(GetComponent<Collider2D>().bounds.center));
+                hit.CreateEffect(GetComponent<Collider2D>().bounds.ClosestPoint(other.bounds.center));
             }
+            lifetime = 0;
         }
     }
 }
