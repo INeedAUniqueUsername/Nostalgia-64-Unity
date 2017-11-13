@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour, IDevice, IWeapon
     private int cooldownLeft;
 
     public void Activate() {
+        print("Fire!");
         if (cooldownLeft > 0)
             return;
         cooldownLeft = cooldown;

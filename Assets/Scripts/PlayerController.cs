@@ -123,6 +123,7 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         for(int i = 0; i < controls.Length; i++) {
             if(Input.GetKey(controls[i].key)) {
+                print(controls[i].key + " key activated");
                 controls[i].action.GetComponent<IDevice>().Activate();
             }
         }
