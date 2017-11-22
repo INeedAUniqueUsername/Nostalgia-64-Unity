@@ -88,6 +88,7 @@
      <Compile Include="Assets\Scripts\Motor.cs" />
      <Compile Include="Assets\Scripts\ObjectTrail.cs" />
      <Compile Include="Assets\Scripts\OrbitVelocity.cs" />
+     <Compile Include="Assets\Scripts\Oscillate.cs" />
      <Compile Include="Assets\Scripts\Physics.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerControllerOld.cs" />

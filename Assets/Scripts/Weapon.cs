@@ -15,6 +15,9 @@ public class Weapon : MonoBehaviour, IUsable, IWeapon
         if (cooldownLeft > 0)
             return;
         cooldownLeft = cooldown;
+        Fire();
+    }
+    public void Fire() {
         float fireAngle = transform.eulerAngles.z;
         Transform shot = Instantiate(projectile);
         Transform rootParent = Helper.getRootParent(transform);

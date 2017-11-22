@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 114893219349132462}
   - component: {fileID: 114768175681161150}
   - component: {fileID: 114449986160156722}
+  - component: {fileID: 114738350771968028}
   m_Layer: 0
   m_Name: Green Ship
   m_TagString: Player
@@ -933,6 +934,17 @@ MonoBehaviour:
   center: 0
   maxLeft: 0
   maxRight: 0
+--- !u!114 &114738350771968028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1442013821755310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d5292a2f6a5da54381cf3483ece3349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114768175681161150
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -155,12 +155,12 @@ GameObject:
   - component: {fileID: 114824979922461424}
   - component: {fileID: 114746049197811684}
   - component: {fileID: 114486357219429656}
-  - component: {fileID: 114151094090956726}
-  - component: {fileID: 114327149288466166}
   - component: {fileID: 114563335314019330}
   - component: {fileID: 114144036741475048}
   - component: {fileID: 114453185315575490}
   - component: {fileID: 235870452953548390}
+  - component: {fileID: 114692624933530534}
+  - component: {fileID: 114447497443028482}
   m_Layer: 0
   m_Name: Crossfire III
   m_TagString: Player
@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4630828020799396}
-  - component: {fileID: 114731048996783382}
+  - component: {fileID: 114684735143866086}
   m_Layer: 0
   m_Name: Mount Motor Right
   m_TagString: Untagged
@@ -246,7 +246,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4877290286233456}
-  - component: {fileID: 114364005038473022}
+  - component: {fileID: 114402125421495908}
   m_Layer: 0
   m_Name: Mount Motor Left
   m_TagString: Untagged
@@ -287,7 +287,7 @@ Transform:
   - {fileID: 4630828020799396}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4164115787716700
 Transform:
   m_ObjectHideFlags: 1
@@ -934,21 +934,6 @@ MonoBehaviour:
     action: {fileID: 1973044194011468}
   - key: 256
     action: {fileID: 1416359723295380}
---- !u!114 &114151094090956726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1454640104884936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d22c816642bc0af4c83c7d16c589a8b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  driveObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &114217139578192698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -960,22 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd741af5c4985b4795373bf2933a03d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114327149288466166
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1454640104884936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e61f74cc345cf5a46aab243d58678d59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &114364005038473022
+--- !u!114 &114402125421495908
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -983,11 +953,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1973044194011468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e520d86ca1fc4594e9503f5544084cf8, type: 3}
+  m_Script: {fileID: 11500000, guid: 10da8158c283b784287a3c4e2e4acf3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 1059737765902646}
-  angularAcceleration: 3
+  angularVelocity: 3
 --- !u!114 &114420493739796252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1015,6 +984,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   structure: 50
+--- !u!114 &114447497443028482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454640104884936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d5292a2f6a5da54381cf3483ece3349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114453185315575490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1148,6 +1128,43 @@ MonoBehaviour:
   forcePos: {x: -0.2, y: 0, z: 0}
   thrustForce: {x: 3, y: 0, z: 0}
   exhaustVelocity: {x: 6, y: 0, z: 0}
+--- !u!114 &114684735143866086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860744795936062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10da8158c283b784287a3c4e2e4acf3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angularVelocity: -3
+--- !u!114 &114692624933530534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454640104884936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e499fecb265ed947a73e5e88ebb7cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reactorObjects: []
+  miscObjects:
+  - {fileID: 1973044194011468}
+  - {fileID: 1860744795936062}
+  driveObjects:
+  - {fileID: 1599365270455214}
+  - {fileID: 1212288934595230}
+  - {fileID: 1237244362301076}
+  weaponObjects:
+  - {fileID: 1176871979605826}
+  - {fileID: 1161385867996694}
+  - {fileID: 1250573854917592}
+  - {fileID: 1520200735166554}
+  capacitorObjects: []
 --- !u!114 &114725726275109948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1163,19 +1180,6 @@ MonoBehaviour:
   projectileSpeed: 10
   cooldown: 4
   line: {fileID: 0}
---- !u!114 &114731048996783382
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1860744795936062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e520d86ca1fc4594e9503f5544084cf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 1059737765902646}
-  angularAcceleration: -3
 --- !u!114 &114746049197811684
 MonoBehaviour:
   m_ObjectHideFlags: 1

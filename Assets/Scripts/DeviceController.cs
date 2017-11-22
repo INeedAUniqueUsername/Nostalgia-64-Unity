@@ -8,6 +8,8 @@ public class DeviceController : MonoBehaviour
     public List<GameObject> reactorObjects;
     private List<IReactor> reactors;
     
+    public List<GameObject> miscObjects;
+    private List<IDevice> misc;
     public List<GameObject> driveObjects;
     private List<IDrive> drives;
 
@@ -21,6 +23,7 @@ public class DeviceController : MonoBehaviour
         weapons = Helper.InitializeComponent<IWeapon>(weaponObjects);
         reactors = Helper.InitializeComponent<IReactor>(reactorObjects);
         capacitors = Helper.InitializeComponent<ICapacitor>(capacitorObjects);
+        misc = Helper.InitializeComponent<IDevice>(miscObjects);
     }
     void Update() {
         float totalOutput = GetReactorOutput(reactors) + GetCapacitorOutput(capacitors);
@@ -34,31 +37,41 @@ public class DeviceController : MonoBehaviour
         for(int i = 0; i < drives.Count && powerLeft > 0; i++) {
             IDrive d = drives[i];
             powerLeft -= d.GetPowerUse();
-
-            
             if(powerLeft < 0) {
                 //TO DO: Handle overload
                 //TO DO: Disable and deactivate drive
                 d.SetActive(false);
             }
-            if(d.GetActive()) {
+            else if(d.GetActive()) {
                 d.Activate();
             }
-            
         }
         for(int i = 0; i < weapons.Count && powerLeft > 0; i++) {
             IWeapon w = weapons[i];
             powerLeft -= w.GetPowerUse();
-            /*
             if(powerLeft < 0) {
-                //Handle overload
-                //Disable and deactivate weapon
+                //TO DO: Handle overload
+                //TO DO: Disable and deactivate weapon
+                w.SetActive(false);
             }
-            if(w.IsActive()) {
-                //Fire weapon
+            else if(w.GetActive()) {
+                w.Activate();
             }
-             */
         }
+        for(int i = 0; i < misc.Count && powerLeft > 0; i++) {
+            IDevice m = misc[i];
+            powerLeft -= m.GetPowerUse();
+            if(powerLeft < 0) {
+                //TO DO: Handle overload
+                //TO DO: Disable and deactivate weapon
+                m.SetActive(false);
+            }
+            else if(m.GetActive()) {
+                m.Activate();
+            }
+        }
+
+        
         float usage = totalOutput - powerLeft;
         //Drain from our reactors first
         for (int i = 0; i < reactors.Count && usage > 0; i++) {
