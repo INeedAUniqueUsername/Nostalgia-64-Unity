@@ -12,10 +12,8 @@ public class Weapon : MonoBehaviour, IUsable, IWeapon
     public bool GetActive() { return active; }
     public void Activate() {
         //print("Fire!");
-        /*
         if (cooldownLeft > 0)
             return;
-        */
         cooldownLeft = cooldown;
         float fireAngle = transform.eulerAngles.z;
         Transform shot = Instantiate(projectile);

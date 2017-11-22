@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\AngledGravity.cs" />
      <Compile Include="Assets\Scripts\Asteroid.cs" />
      <Compile Include="Assets\Scripts\Battery.cs" />
+     <Compile Include="Assets\Scripts\ControlSet.cs" />
      <Compile Include="Assets\Scripts\Damageable.cs" />
      <Compile Include="Assets\Scripts\Decelerator.cs" />
      <Compile Include="Assets\Scripts\DeceleratorToggle.cs" />
@@ -84,10 +85,12 @@
      <Compile Include="Assets\Scripts\IWeapon.cs" />
      <Compile Include="Assets\Scripts\KeypadWeaponGUI.cs" />
      <Compile Include="Assets\Scripts\Lifetime.cs" />
+     <Compile Include="Assets\Scripts\Motor.cs" />
      <Compile Include="Assets\Scripts\ObjectTrail.cs" />
      <Compile Include="Assets\Scripts\OrbitVelocity.cs" />
      <Compile Include="Assets\Scripts\Physics.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerControllerOld.cs" />
      <Compile Include="Assets\Scripts\Polygon.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\ProjectileTrail.cs" />
