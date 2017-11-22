@@ -2,29 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drive : MonoBehaviour, IDrive, IDevice
-{
+public class Drive : MonoBehaviour, IDrive, IDevice {
     public Transform exhaust;
+    public Vector3 forcePos;
     public Vector3 thrustForce;
     public Vector3 exhaustVelocity;
     private double EXHAUST_INTERVAL = 0.1f;
     private double nextExhaust = 0;
-    Transform IDrive.GetExhaust() {
+    private bool active;
+    public Transform GetExhaust() {
         return exhaust;
     }
-    Vector3 IDrive.GetForce() {
+    public Vector3 GetForce() {
         return thrustForce;
     }
-    Vector3 IDrive.GetPosition() {
-        return transform.position;
+    public Vector3 GetPosition() {
+        return transform.position + Helper.RotatePointAroundOrigin(forcePos, new Vector3(0, 0, transform.eulerAngles.z));
     }
-    void Start () {
-		
-	}
-	void Update () {
-		
-	}
-
+    public float GetPowerUse() {
+        return 0;
+    }
+    public void SetActive(bool active) { this.active = active; }
+    public bool GetActive() { return active; }
     public void Activate()
     {
         bool makeExhaust = Time.time > nextExhaust;
@@ -48,11 +47,20 @@ public class Drive : MonoBehaviour, IDrive, IDevice
 
             Transform exhaust = Instantiate(exhaustType);
             
-            exhaust.GetComponent<Projectile>().SetOwner(parent);
+            exhaust.GetComponent<Projectile>().owner = parent;
             exhaust.gameObject.SetActive(true);
-            exhaust.position = pos + Helper.PolarOffset(z+180, 0.1f);
+            exhaust.position = pos + Helper.PolarOffset3(z+180, 0.1f);
             exhaust.GetComponent<Rigidbody2D>().velocity = rb.velocity + new Vector2(velocity_exhaust.x, velocity_exhaust.y);
             exhaust.Rotate(new Vector3(0, 0, z + 90 + Vector3.Angle(Vector3.zero, force_adjusted)));
         }
+    }
+    void OnDrawGizmosSelected() {
+        Vector3 position = ((IDrive)this).GetPosition();
+        Vector3 force = ((IDrive)this).GetForce();
+        float z = (transform.eulerAngles.z);
+        Gizmos.color = Color.white;
+        Gizmos.DrawLine(position, position + Helper.RotatePointAroundOrigin(force, new Vector3(0, 0, z)));
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(position, position + Helper.RotatePointAroundOrigin(exhaustVelocity, new Vector3(0, 0, z + 180)));
     }
 }

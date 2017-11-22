@@ -1,0 +1,26 @@
+-IDamageable
+--Damageable
+-Projectile
+-IDamage: Triggered by projectile. Applies damage, destruction, and miscellaneous debuffs.
+--HPDamage: Standard damage that reduces hit points
+--TractorBeam: Special effect that applies force in the direction opposite to the projectile's z rotation.
+-IHitEffect: Triggered by Projectile. Creates graphical effects for hits.
+--HitEffect: Creates a given GameObject as the effect.
+--SimpleHit: Creates an empty game object and assigns a Sprite and a Lifetime to it.
+-ObjectTrail: Creates a given GameObject every given number of ticks.
+-SimpleTrail: Creates a GameObject with the same sprite and scale, and assigns a Lifetime to it.
+-IOnObjDestroyed: Triggered by Damageable upon object destruction.
+--IFragmentExplosion: Creates a ring of given GameObjects of given radius and count with given speed and angular velocity
+-IDevice: Has a single function to be activated by a Starship.
+--IDrive: Applies a force to the Starship object in order to cause motion. Also creates Exhaust projectiles.
+---Drive: Standard implementation
+--IWeapon: Component that creates a Projectile upon activation.
+---Weapon: Standard implementation.
+-Swivel: Component that allows a weapon to rotate within a limited range.
+-Turret: Component that allows a weapon to rotate (should be connected to Swivel via interface)
+-Turret_Mouse: Same functionality as a turret, but follows the mouse (should be replaced with a generalized MouseAim component)
+-Lifetime: Destroys an object after a given time (should fire IOnObjDestroyed)
+-Starship: Tracks devices and statuses
+-SpriteFade: Makes a sprite fade over time. Redundant with Lifetime (should fix this)
+-SpriteScale: Makes a sprite shrink over time. Redundant with Lifetime (should fix this)
+-Helper: Does miscellaneous math calculations

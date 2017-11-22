@@ -14,10 +14,10 @@ public class FragmentExplosion : MonoBehaviour, IOnObjectDestroyed {
             float angle = interval * i;
             GameObject projectile = Instantiate(fragment).gameObject;
             projectile.SetActive(true);
-            projectile.transform.position = transform.position + Helper.PolarOffset(angle, radius);
+            projectile.transform.position = transform.position + Helper.PolarOffset3(angle, radius);
             projectile.transform.eulerAngles = new Vector3(0, 0, angle);
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-            rb.velocity = Helper.PolarOffset(angle, speed);
+            rb.velocity = Helper.PolarOffset3(angle, speed);
             rb.angularVelocity = angularVelocity;
         }
     }

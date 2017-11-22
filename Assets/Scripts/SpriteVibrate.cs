@@ -10,6 +10,6 @@ public class SpriteVibrate : MonoBehaviour {
         origin = transform.position;
     }
     void Update() {
-        transform.position = origin + Helper.PolarOffset(Random.value * 360, Random.value * radius);
+        transform.position = origin + Helper.PolarOffset3(Random.value * 360, Random.value * radius);
     }
 }

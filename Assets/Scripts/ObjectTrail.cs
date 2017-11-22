@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectTrail : MonoBehaviour {
     public Transform effect;
     public int interval;
-    private int next;
+    protected int next;
 	// Update is called once per frame
 	void Update () {
         next--;

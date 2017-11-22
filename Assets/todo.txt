@@ -1,0 +1,7 @@
+﻿* Reactor: Generates long-term power
+* Battery: Stores a limited amount of ready-to-use power.
+* Shields
+* Missile
+** Reticle-guided missile
+** Mouse-guided missile
+* Crossfire III
