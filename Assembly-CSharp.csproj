@@ -119,6 +119,8 @@
      <Compile Include="Assets\Scripts\WeaponController.cs" />
      <Compile Include="Assets\Scripts\Weapons.cs" />
      <Compile Include="Assets\Scripts\WeaponTimer.cs" />
+     <Compile Include="Assets\Shield.cs" />
+     <Compile Include="Assets\ShieldSegment.cs" />
      <None Include="Assets\Scripts\Organization.txt" />
      <None Include="Assets\todo.txt" />
  <Reference Include="UnityEngine.UI">

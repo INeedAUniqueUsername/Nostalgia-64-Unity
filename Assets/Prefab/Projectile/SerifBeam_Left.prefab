@@ -32,7 +32,7 @@ GameObject:
   - component: {fileID: 114589922335662862}
   m_Layer: 0
   m_Name: SerifBeam_Left
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +113,8 @@ MonoBehaviour:
   lifetime: 75
   owner: {fileID: 0}
   passthrough: 0
+  hitSolids: 1
+  hitTriggers: 1
 --- !u!114 &114194577485086784
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114292603334471698}
   m_Layer: 0
   m_Name: TractorWave
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,6 +121,8 @@ MonoBehaviour:
   lifetime: 60
   owner: {fileID: 0}
   passthrough: 1
+  hitSolids: 1
+  hitTriggers: 0
 --- !u!114 &114443338440022752
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,6 +6,8 @@ public class Projectile : MonoBehaviour {
     public int lifetime;
     public Transform owner;
     public bool passthrough;
+    public bool hitSolids = true;
+    public bool hitTriggers;
 	void Update () {
         if (lifetime <= 0) {
             IOnObjectDestroyed[] onDestroyed = GetComponents<IOnObjectDestroyed>();
@@ -20,7 +22,7 @@ public class Projectile : MonoBehaviour {
         if(lifetime == 0) {
             return;
         }
-        if (!Helper.isRelated(owner, other.transform) && !other.isTrigger) {
+        if (!Helper.isRelated(owner, other.transform) && ((hitSolids && !other.isTrigger) || (hitTriggers && other.isTrigger))) {
             IHitEffect[] hitEffects = GetComponents<IHitEffect>();
             for(int i = 0; i < hitEffects.Length; i++) {
                 hitEffects[i].CreateEffect(GetComponent<Collider2D>().bounds.ClosestPoint(other.bounds.center));

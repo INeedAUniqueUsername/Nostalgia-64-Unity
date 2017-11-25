@@ -30,7 +30,7 @@ GameObject:
   - component: {fileID: 114631726322404344}
   m_Layer: 0
   m_Name: SpiralBeam
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,6 +158,8 @@ MonoBehaviour:
   lifetime: 120
   owner: {fileID: 0}
   passthrough: 0
+  hitSolids: 1
+  hitTriggers: 0
 --- !u!114 &114808818970013386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  angleRange: 90
+  angleRange: 60
   angledSpeed: 10
 --- !u!212 &212903121422596354
 SpriteRenderer:
