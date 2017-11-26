@@ -44,10 +44,6 @@ GameObject:
   - component: {fileID: 212642672890793102}
   - component: {fileID: 60384112343408766}
   - component: {fileID: 114318048043215388}
-  - component: {fileID: 114392494003401066}
-  - component: {fileID: 114188420379093212}
-  - component: {fileID: 114402898965038282}
-  - component: {fileID: 114127029103826048}
   - component: {fileID: 114132645999484514}
   - component: {fileID: 114640456073741030}
   - component: {fileID: 114281323154637014}
@@ -359,19 +355,6 @@ MonoBehaviour:
   projectileSpeed: 27
   cooldown: 5
   line: {fileID: 0}
---- !u!114 &114127029103826048
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362535410750434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e61f74cc345cf5a46aab243d58678d59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponObjects:
-  - {fileID: 1257438386765248}
 --- !u!114 &114132645999484514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -384,17 +367,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   structure: 80
---- !u!114 &114188420379093212
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362535410750434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f320e4bcbeed7874ab8b69eb6c6fd69c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114281323154637014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -430,31 +402,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   structure: 50
---- !u!114 &114392494003401066
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362535410750434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af4353743a976254e827bbb292e33356, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114402898965038282
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1362535410750434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d22c816642bc0af4c83c7d16c589a8b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  driveObjects:
-  - {fileID: 1926256848950758}
-  - {fileID: 1686681839806994}
 --- !u!114 &114403519378204960
 MonoBehaviour:
   m_ObjectHideFlags: 1

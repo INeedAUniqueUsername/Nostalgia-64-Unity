@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Obsolete("Use DeviceController instead", true)]
 public class DriveController : MonoBehaviour
 {
     public List<GameObject> driveObjects;

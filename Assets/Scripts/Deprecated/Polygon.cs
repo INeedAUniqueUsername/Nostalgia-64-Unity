@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Obsolete("Use a Sprite instead", true)]
 public class Polygon : MonoBehaviour {
 
     public float lineSize = 0.1f;

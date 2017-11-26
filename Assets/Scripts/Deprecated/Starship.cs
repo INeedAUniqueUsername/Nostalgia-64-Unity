@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Obsolete("Unused", true)]
 public class Starship : MonoBehaviour {
     
     //public int rotation_accel = 5;

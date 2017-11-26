@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Obsolete("Use a Sprite instead", true)]
 public class Rectangle : MonoBehaviour {
     public float width;
     public float height;

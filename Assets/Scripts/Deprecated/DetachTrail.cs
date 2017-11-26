@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Obsolete("Does not work", true)]
 public class DetachTrail : MonoBehaviour, IOnObjectDestroyed {
     public void OnObjectDestroyed() {
         ParticleSystem particleSystem = GetComponent<ParticleSystem>();

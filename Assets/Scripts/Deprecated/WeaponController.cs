@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Obsolete("Use DeviceController instead", true)]
 public class WeaponController : MonoBehaviour {
     public List<GameObject> weaponObjects;
     private List<IWeapon> weapons;

@@ -58,11 +58,6 @@ GameObject:
   - component: {fileID: 50745013862011674}
   - component: {fileID: 212519239778266926}
   - component: {fileID: 60777398210839586}
-  - component: {fileID: 114879977298192548}
-  - component: {fileID: 114202698637075216}
-  - component: {fileID: 114192478217164576}
-  - component: {fileID: 114486705658885028}
-  - component: {fileID: 114666078328859416}
   - component: {fileID: 114302643918827504}
   - component: {fileID: 114778249901743744}
   - component: {fileID: 114072142045957368}
@@ -649,28 +644,6 @@ MonoBehaviour:
   forcePos: {x: 0, y: 0, z: 0}
   thrustForce: {x: 1, y: 0, z: 0}
   exhaustVelocity: {x: 4, y: 0, z: 0}
---- !u!114 &114192478217164576
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1192723262905436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f320e4bcbeed7874ab8b69eb6c6fd69c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114202698637075216
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1192723262905436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af4353743a976254e827bbb292e33356, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114248950456041074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -726,21 +699,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   structure: 50
---- !u!114 &114486705658885028
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1192723262905436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d22c816642bc0af4c83c7d16c589a8b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  driveObjects:
-  - {fileID: 1368305597860610}
-  - {fileID: 1320909761690364}
-  - {fileID: 1721693738380808}
 --- !u!114 &114543391555032050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -775,20 +733,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd741af5c4985b4795373bf2933a03d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114666078328859416
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1192723262905436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e61f74cc345cf5a46aab243d58678d59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponObjects:
-  - {fileID: 1969018258591700}
-  - {fileID: 1819652160054878}
 --- !u!114 &114762368924391762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -842,18 +786,6 @@ MonoBehaviour:
   forcePos: {x: 0, y: 0, z: 0}
   thrustForce: {x: 2, y: 0, z: 0}
   exhaustVelocity: {x: 4, y: 0, z: 0}
---- !u!114 &114879977298192548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1192723262905436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04aa02a8ef247f41bd11deaa7c24cf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tags: 
 --- !u!114 &114997743347362714
 MonoBehaviour:
   m_ObjectHideFlags: 1
