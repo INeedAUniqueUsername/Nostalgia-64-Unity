@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114369056032141372}
   - component: {fileID: 114393463404772216}
   - component: {fileID: 114218492230820196}
+  - component: {fileID: 114837335031537620}
   m_Layer: 0
   m_Name: Courier III Cannon Beam
   m_TagString: Projectile
@@ -109,8 +110,7 @@ MonoBehaviour:
   lifetime: 75
   owner: {fileID: 0}
   passthrough: 0
-  hitSolids: 1
-  hitTriggers: 0
+  canHit: 05000000
 --- !u!114 &114188670873005986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,6 +165,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 21300000, guid: 3ab775d053bc24a48a8c269162b8461b, type: 3}
   lifetime: 18
+--- !u!114 &114837335031537620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1704461911448750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f3bbe67d9466743b6155f7f003665e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 04000000
 --- !u!212 &212642368579088592
 SpriteRenderer:
   m_ObjectHideFlags: 1

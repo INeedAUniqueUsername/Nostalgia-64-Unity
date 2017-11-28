@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 114768175681161150}
   - component: {fileID: 114449986160156722}
   - component: {fileID: 114738350771968028}
+  - component: {fileID: 114112196984161196}
   m_Layer: 0
   m_Name: Green Ship
   m_TagString: Player
@@ -275,7 +276,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1871626793598590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0.4, y: 0, z: 0}
   m_LocalScale: {x: 1.0000004, y: 1.0000004, z: 1}
   m_Children: []
   m_Father: {fileID: 4667490764667444}
@@ -574,7 +575,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.45}
+    oldSize: {x: 0.36, y: 0.33}
     newSize: {x: 0.51, y: 0.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -716,7 +717,6 @@ MonoBehaviour:
   projectile: {fileID: 4136399466842396, guid: 580334ec2ead7fb44bcd7630edc8194e, type: 2}
   projectileSpeed: 20
   cooldown: 20
-  line: {fileID: 0}
 --- !u!114 &114013587849266302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -731,7 +731,20 @@ MonoBehaviour:
   projectile: {fileID: 4637026350108072, guid: 0adec4eb0f191b2469219f6c9193da46, type: 2}
   projectileSpeed: 15
   cooldown: 10
-  line: {fileID: 0}
+--- !u!114 &114112196984161196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1442013821755310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94be67f4fd6bbda439fa112715de1eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDriveObjects: []
+  rightDriveObjects: []
+  forwardDriveObjects: []
 --- !u!114 &114168146592229402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -783,7 +796,6 @@ MonoBehaviour:
   projectile: {fileID: 4440090799778598, guid: a6db239be002cea4b9d8369556a5e4de, type: 2}
   projectileSpeed: 15
   cooldown: 10
-  line: {fileID: 0}
 --- !u!114 &114370592486750114
 MonoBehaviour:
   m_ObjectHideFlags: 1

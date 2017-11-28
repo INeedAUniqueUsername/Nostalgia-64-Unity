@@ -81,4 +81,35 @@ public static class Helper {
             previous = point;
         }
     }
+    public static float GetAngleDiffMin(float start, float end) {
+        return Mathf.Min(GetAngleDiffLeft(start, end), GetAngleDiffRight(start, end));
+    }
+    public static float GetAngleDiffRight(float start, float end) {
+        return ModDegrees(start - end);
+    }
+    public static float GetAngleDiffLeft(float start, float end) {
+        return ModDegrees(end - start);
+    }
+    public static float ModDegrees(float degrees) {
+        float result = degrees;
+        while(result < 0) {
+            result += 360;
+        }
+        while(result > 360) {
+            result -= 360;
+        }
+        return result;
+    }
+    public static float GetTorque(Vector3 objectPosition, Vector3 forcePosition, Vector3 force) {
+        float radius = (objectPosition - forcePosition).magnitude;
+        float forceMagnitude = force.magnitude;
+        float angle = Vector3.Angle(forcePosition, objectPosition) - Vector3.Angle(Vector3.zero, force);
+        return radius * forceMagnitude * Mathf.Sin(angle * Mathf.Deg2Rad);
+    }
+    //https://answers.unity.com/answers/26511/view.html
+	public static void SetLayer(Transform root, int layer) {
+		root.gameObject.layer = layer;
+		foreach(Transform child in root)
+			SetLayer(child, layer);
+	}
 }

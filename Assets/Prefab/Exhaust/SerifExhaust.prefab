@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 60877778135026830}
   - component: {fileID: 114766073500909270}
   - component: {fileID: 114536965581186658}
+  - component: {fileID: 114567380377016898}
+  - component: {fileID: 114614633994523110}
   m_Layer: 0
   m_Name: SerifExhaust
   m_TagString: Untagged
@@ -139,6 +141,7 @@ MonoBehaviour:
   lifetime: 45
   owner: {fileID: 0}
   passthrough: 0
+  canHit: 05000000
 --- !u!114 &114151522447757254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,6 +167,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+--- !u!114 &114567380377016898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428358767987210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f3bbe67d9466743b6155f7f003665e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 04000000
+--- !u!114 &114614633994523110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428358767987210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f3bbe67d9466743b6155f7f003665e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 
 --- !u!114 &114766073500909270
 MonoBehaviour:
   m_ObjectHideFlags: 1

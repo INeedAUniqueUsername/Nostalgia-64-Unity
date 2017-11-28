@@ -16,7 +16,13 @@ public class Drive : MonoBehaviour, IDrive, IDevice {
     public Vector3 GetForce() {
         return thrustForce;
     }
+    public Vector3 GetAdjustedForce() {
+        return Helper.RotatePointAroundOrigin(thrustForce, new Vector3(0, 0, transform.eulerAngles.z));
+    }
     public Vector3 GetPosition() {
+        return forcePos;
+    }
+    public Vector3 GetAdjustedPosition() {
         return transform.position + Helper.RotatePointAroundOrigin(forcePos, new Vector3(0, 0, transform.eulerAngles.z));
     }
     public float GetPowerUse() {
@@ -35,7 +41,7 @@ public class Drive : MonoBehaviour, IDrive, IDevice {
         Rigidbody2D rb = parent.GetComponent<Rigidbody2D>();
         float z = (transform.eulerAngles.z);
         IDrive d = ((IDrive)this);
-        Vector3 pos = d.GetPosition();
+        Vector3 pos = d.GetAdjustedPosition();
         
         Vector3 force_adjusted = Helper.RotatePointAroundOrigin(d.GetForce(), new Vector3(0, 0, z));
         //print("Force adjusted: " + force_adjusted);
@@ -55,8 +61,8 @@ public class Drive : MonoBehaviour, IDrive, IDevice {
         }
     }
     void OnDrawGizmosSelected() {
-        Vector3 position = ((IDrive)this).GetPosition();
-        Vector3 force = ((IDrive)this).GetForce();
+        Vector3 position = ((IDrive)this).GetAdjustedPosition();
+        Vector3 force = ((IDrive)this).GetAdjustedForce();
         float z = (transform.eulerAngles.z);
         Gizmos.color = Color.white;
         Gizmos.DrawLine(position, position + Helper.RotatePointAroundOrigin(force, new Vector3(0, 0, z)));

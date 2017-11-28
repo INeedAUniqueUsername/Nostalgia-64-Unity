@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 212396186804857996}
   - component: {fileID: 60631208436628554}
   - component: {fileID: 114724827449539496}
+  - component: {fileID: 114281225361247048}
   m_Layer: 0
   m_Name: CourierExhaustMain
   m_TagString: Untagged
@@ -93,6 +94,18 @@ PolygonCollider2D:
       - {x: -0.03, y: -0.12}
       - {x: 0.03, y: -0.12}
       - {x: 0.03, y: 0.12}
+--- !u!114 &114281225361247048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1864048434057648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f3bbe67d9466743b6155f7f003665e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 04000000
 --- !u!114 &114284093085664112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,6 +148,7 @@ MonoBehaviour:
   lifetime: 45
   owner: {fileID: 0}
   passthrough: 0
+  canHit: 05000000
 --- !u!212 &212396186804857996
 SpriteRenderer:
   m_ObjectHideFlags: 1

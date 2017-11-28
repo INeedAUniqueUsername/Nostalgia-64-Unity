@@ -30,6 +30,7 @@ GameObject:
   - component: {fileID: 198150262110860080}
   - component: {fileID: 114367871652230378}
   - component: {fileID: 114589922335662862}
+  - component: {fileID: 114726874017076402}
   m_Layer: 0
   m_Name: SerifBeam_Left
   m_TagString: Projectile
@@ -113,8 +114,7 @@ MonoBehaviour:
   lifetime: 75
   owner: {fileID: 0}
   passthrough: 0
-  hitSolids: 1
-  hitTriggers: 1
+  canHit: 0500000004000000
 --- !u!114 &114194577485086784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,6 +168,18 @@ MonoBehaviour:
   halfPeriod: 12
   turnDirection: 0
   angledSpeed: 20
+--- !u!114 &114726874017076402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1042550141473694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f3bbe67d9466743b6155f7f003665e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 05000000
 --- !u!114 &114830384757345450
 MonoBehaviour:
   m_ObjectHideFlags: 1

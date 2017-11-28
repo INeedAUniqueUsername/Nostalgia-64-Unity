@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 114692624933530534}
   - component: {fileID: 114447497443028482}
   m_Layer: 0
-  m_Name: Crossfire III
+  m_Name: Crossfire I
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -968,7 +968,6 @@ MonoBehaviour:
   projectile: {fileID: 4630846086573710, guid: 5ff89ab0466650940a421cbca3ba0478, type: 2}
   projectileSpeed: 10
   cooldown: 4
-  line: {fileID: 0}
 --- !u!114 &114436592563163064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1022,7 +1021,6 @@ MonoBehaviour:
   projectile: {fileID: 4630846086573710, guid: 5ff89ab0466650940a421cbca3ba0478, type: 2}
   projectileSpeed: 10
   cooldown: 4
-  line: {fileID: 0}
 --- !u!114 &114480342792804170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1165,7 +1163,6 @@ MonoBehaviour:
   projectile: {fileID: 4630846086573710, guid: 5ff89ab0466650940a421cbca3ba0478, type: 2}
   projectileSpeed: 10
   cooldown: 4
-  line: {fileID: 0}
 --- !u!114 &114761644325979800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1180,7 +1177,6 @@ MonoBehaviour:
   projectile: {fileID: 4630846086573710, guid: 5ff89ab0466650940a421cbca3ba0478, type: 2}
   projectileSpeed: 10
   cooldown: 4
-  line: {fileID: 0}
 --- !u!114 &114846585466706604
 MonoBehaviour:
   m_ObjectHideFlags: 1

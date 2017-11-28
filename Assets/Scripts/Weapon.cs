@@ -37,19 +37,6 @@ public class Weapon : MonoBehaviour, IUsable, IWeapon
             cooldownLeft--;
         
     }
-    //https://gamedev.stackexchange.com/questions/96964/how-to-correctly-draw-a-line-in-unity
-    public Material line;
-    void OnPostRender() {
-        if(line == null) {
-            return;
-        }
-        GL.Begin(GL.LINES);
-        line.SetPass(0);
-        GL.Color(new Color(0f, 0f, 0, 1f));
-        GL.Vertex(transform.position);
-        GL.Vertex(transform.position + Helper.PolarOffset3(transform.eulerAngles.z, 100));
-        GL.End();
-    }
     public int GetCooldown() {
         return cooldown;
     }
@@ -62,7 +49,6 @@ public class Weapon : MonoBehaviour, IUsable, IWeapon
     public Transform GetProjectile() {
         return projectile;
     }
-
     public float GetPowerUse() {
         return 0;
     }

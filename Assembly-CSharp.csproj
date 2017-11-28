@@ -66,7 +66,6 @@
      <Compile Include="Assets\Scripts\Deprecated\Polygon.cs" />
      <Compile Include="Assets\Scripts\Deprecated\Rectangle.cs" />
      <Compile Include="Assets\Scripts\Deprecated\Starship.cs" />
-     <Compile Include="Assets\Scripts\Deprecated\Tags.cs" />
      <Compile Include="Assets\Scripts\Deprecated\WeaponController.cs" />
      <Compile Include="Assets\Scripts\Deprecated\Weapons.cs" />
      <Compile Include="Assets\Scripts\Destroy.cs" />
@@ -93,6 +92,7 @@
      <Compile Include="Assets\Scripts\KeypadWeaponGUI.cs" />
      <Compile Include="Assets\Scripts\Lifetime.cs" />
      <Compile Include="Assets\Scripts\Motor.cs" />
+     <Compile Include="Assets\Scripts\ObjectTagSet.cs" />
      <Compile Include="Assets\Scripts\ObjectTrail.cs" />
      <Compile Include="Assets\Scripts\OrbitVelocity.cs" />
      <Compile Include="Assets\Scripts\Oscillate.cs" />
@@ -121,6 +121,9 @@
      <Compile Include="Assets\Scripts\WeaponTimer.cs" />
      <Compile Include="Assets\Shield.cs" />
      <Compile Include="Assets\ShieldSegment.cs" />
+     <Compile Include="Assets\SimpleShipAI.cs" />
+     <Compile Include="Assets\WrapWall.cs" />
+     <Compile Include="Assets\WrapZone.cs" />
      <None Include="Assets\Scripts\Organization.txt" />
      <None Include="Assets\todo.txt" />
  <Reference Include="UnityEngine.UI">

@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114266678037204826}
   - component: {fileID: 114971051261701444}
   - component: {fileID: 114424191397132504}
+  - component: {fileID: 114537490840552286}
   m_Layer: 0
   m_Name: Courier II Cannon Beam
   m_TagString: Projectile
@@ -109,8 +110,7 @@ MonoBehaviour:
   lifetime: 60
   owner: {fileID: 0}
   passthrough: 0
-  hitSolids: 1
-  hitTriggers: 0
+  canHit: 05000000
 --- !u!114 &114266678037204826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,6 +136,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+--- !u!114 &114537490840552286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1619044463803482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f3bbe67d9466743b6155f7f003665e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 04000000
 --- !u!114 &114832416678433538
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -46,6 +46,9 @@ public class Shield : MonoBehaviour {
 					segmentComponent.parent = this;
 					segmentComponent.segmentMaxHP = segmentMaxHP;
 					segmentComponent.segmentRegenRate = segmentRegenRate;
+
+					segmentToCreate.AddComponent<ObjectTagSet>().AddTag(new ObjectTag[] {ObjectTag.ShieldSegment, ObjectTag.Energy});
+
 					segments[segmentCreateIndex]  = segmentToCreate.transform;
 					break;
 				}

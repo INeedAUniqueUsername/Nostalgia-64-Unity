@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 60826334688404054}
   - component: {fileID: 114810295600928112}
   - component: {fileID: 114608527480216460}
+  - component: {fileID: 114467893438051322}
   m_Layer: 0
   m_Name: CrossfireExhaust
   m_TagString: Untagged
@@ -139,6 +140,7 @@ MonoBehaviour:
   lifetime: 45
   owner: {fileID: 0}
   passthrough: 0
+  canHit: 05000000
 --- !u!114 &114321755261074956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,6 +170,18 @@ MonoBehaviour:
   depth: 1
   lineSize: 0.02
   shape: {fileID: 4741208680447054, guid: bdd4e2ecf354f7443b16b7d48f9d8319, type: 2}
+--- !u!114 &114467893438051322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973469842798654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f3bbe67d9466743b6155f7f003665e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 04000000
 --- !u!114 &114608527480216460
 MonoBehaviour:
   m_ObjectHideFlags: 1

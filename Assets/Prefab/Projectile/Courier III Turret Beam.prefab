@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114323180895314840}
   - component: {fileID: 114036695534195008}
   - component: {fileID: 114405417722970710}
+  - component: {fileID: 114601833739610414}
   m_Layer: 0
   m_Name: Courier III Turret Beam
   m_TagString: Projectile
@@ -142,8 +143,7 @@ MonoBehaviour:
   lifetime: 75
   owner: {fileID: 0}
   passthrough: 0
-  hitSolids: 1
-  hitTriggers: 0
+  canHit: 05000000
 --- !u!114 &114323180895314840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,6 +169,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+--- !u!114 &114601833739610414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1874078414330676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f3bbe67d9466743b6155f7f003665e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: 04000000
 --- !u!212 &212340928011159678
 SpriteRenderer:
   m_ObjectHideFlags: 1
