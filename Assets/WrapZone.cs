@@ -17,10 +17,7 @@ public class WrapZone : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D col) {
 		if(!hit.Contains(col) && col.gameObject.GetComponent<Rigidbody2D>()) {
-			WrapCloneTracker tracker = col.gameObject.GetComponent<WrapCloneTracker>();
-			if(tracker == null) {
-				tracker = col.gameObject.AddComponent<WrapCloneTracker>();
-			}
+			WrapCloneTracker tracker = col.gameObject.AddComponent<WrapCloneTracker>();
 			tracker.EnterZone(GetComponent<BoxCollider2D>().size);
 			hit.Add(col);
 		}
@@ -28,18 +25,18 @@ public class WrapZone : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D col) {
 		WrapCloneTracker tracker = col.gameObject.GetComponent<WrapCloneTracker>();
 		if(tracker != null) {
+			hit.Remove(col);
 			tracker.ExitZone();
-		}
-		hit.Remove(col);
-		if(col.transform.position.x < transform.position.x - triggerDimensions.x/2) {
-			col.gameObject.transform.position += new Vector3(triggerDimensions.x, 0);
-		} else if(col.transform.position.x > transform.position.x + triggerDimensions.y/2) {
-			col.gameObject.transform.position += new Vector3(-triggerDimensions.x, 0);
-		}
-		if(col.transform.position.y < transform.position.y - triggerDimensions.y/2) {
-			col.gameObject.transform.position += new Vector3(0, triggerDimensions.y);
-		} else if(col.transform.position.y > transform.position.y + triggerDimensions.y/2) {
-			col.gameObject.transform.position += new Vector3(0, -triggerDimensions.y);
+			if(col.transform.position.x < transform.position.x - triggerDimensions.x/2) {
+				col.gameObject.transform.position += new Vector3(triggerDimensions.x, 0);
+			} else if(col.transform.position.x > transform.position.x + triggerDimensions.y/2) {
+				col.gameObject.transform.position += new Vector3(-triggerDimensions.x, 0);
+			}
+			if(col.transform.position.y < transform.position.y - triggerDimensions.y/2) {
+				col.gameObject.transform.position += new Vector3(0, triggerDimensions.y);
+			} else if(col.transform.position.y > transform.position.y + triggerDimensions.y/2) {
+				col.gameObject.transform.position += new Vector3(0, -triggerDimensions.y);
+			}
 		}
 	}
 }
@@ -71,7 +68,6 @@ class WrapCloneTracker : MonoBehaviour {
 		wrap.offset = offset;
 		return clone;
 	}
-	
 	public void ExitZone() {
 		GameObject[] clones = {
 				upLeft,		up,			upRight,
@@ -79,15 +75,19 @@ class WrapCloneTracker : MonoBehaviour {
 				downLeft,	down,		downRight,
 		};
 		foreach(GameObject clone in clones) {
+			clone.SetActive(false);
 			Destroy(clone);
 		}
-		this.enabled = false;
+		Destroy(this);
 	}
 }
 class WrapClone : MonoBehaviour {
 	public GameObject parent;
 	public Vector3 offset;
 	void Update() {
+		if(parent == null) {
+			Destroy(gameObject);
+		}
 		transform.eulerAngles = parent.transform.eulerAngles;
 		transform.position = parent.transform.position + offset;
 	}
