@@ -7,7 +7,7 @@ public class SimpleTrail : MonoBehaviour {
     public float lifetime;
 	// Use this for initialization
 	void Start () {
-        print("Simple Trail created");
+        //print("Simple Trail created");
     }
 	
 	// Update is called once per frame

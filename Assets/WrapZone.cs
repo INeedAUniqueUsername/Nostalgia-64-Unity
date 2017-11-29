@@ -66,6 +66,7 @@ class WrapCloneTracker : MonoBehaviour {
 		WrapClone wrap = clone.AddComponent<WrapClone>();
 		wrap.parent = gameObject;
 		wrap.offset = offset;
+		wrap.Initialize();
 		return clone;
 	}
 	public void ExitZone() {
@@ -84,11 +85,21 @@ class WrapCloneTracker : MonoBehaviour {
 class WrapClone : MonoBehaviour {
 	public GameObject parent;
 	public Vector3 offset;
+	public SpriteRenderer spriteRenderer;
+	public SpriteRenderer spriteRenderer_parent;
+	public void Initialize() {
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		spriteRenderer_parent = parent.GetComponent<SpriteRenderer>();
+	}
 	void Update() {
 		if(parent == null) {
 			Destroy(gameObject);
+			return;
 		}
 		transform.eulerAngles = parent.transform.eulerAngles;
 		transform.position = parent.transform.position + offset;
+		transform.localScale = parent.transform.localScale;
+
+		spriteRenderer.color = spriteRenderer_parent.color;
 	}
 }

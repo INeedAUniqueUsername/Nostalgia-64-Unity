@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Interceptor.cs" />
      <Compile Include="Assets\Packages\2D Array\ArrayLayoutTest.cs" />
      <Compile Include="Assets\Packages\2D Array\GridLayout.cs" />
      <Compile Include="Assets\Scripts\AngledGravity.cs" />

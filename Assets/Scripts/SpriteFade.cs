@@ -8,7 +8,7 @@ public class SpriteFade : MonoBehaviour {
     private float lifeLeft;
 
     void Start() {
-        print("Sprite Fade created");
+        //print("Sprite Fade created");
         startOpacity /= 255;
         lifeLeft = lifespan;
     }

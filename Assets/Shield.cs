@@ -24,12 +24,12 @@ public class Shield : MonoBehaviour {
 		if(segmentCreateTimeLeft > 0) {
 			segmentCreateTimeLeft--;
 		} else {
-			print("Ready to create new segment");
+			//print("Ready to create new segment");
 			segmentCreateTimeLeft = segmentCreateTime;
 			int centerSegmentIndex = segmentCount/2;
 			for(int i = 0; i < segments.Count; i++) {
 				if(segments[i] == null) {
-					print("Create new segment");
+					//print("Create new segment");
 					int segmentCreateIndex = i;
 					GameObject segmentToCreate = new GameObject();
 					segmentToCreate.SetActive(true);

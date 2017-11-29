@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf8cace95e1f34aa622ab1070221b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 75
+  lifetime: 120
   owner: {fileID: 0}
   passthrough: 0
   canHit: 0500000004000000
@@ -206,7 +206,7 @@ ParticleSystem:
   lengthInSec: 100000
   simulationSpeed: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 1
   autoRandomSeed: 0
