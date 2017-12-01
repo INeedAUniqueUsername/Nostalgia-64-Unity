@@ -49,6 +49,16 @@ public static class Helper {
         }
         return result;
     }
+    public static T[] InitializeComponents<T>(GameObject obj) {
+        if (obj == null) {
+            throw new Exception("Invalid Component object");
+        }
+        T[] result = obj.GetComponents<T>();
+        if (result == null) {
+            throw new Exception("Invalid Component instance");
+        }
+        return result;
+    }
     public static List<T> InitializeComponent<T>(List<GameObject> objList) {
         List<T> result = new List<T>(objList.Count);
         for (int i = 0; i < objList.Count; i++) {

@@ -27,16 +27,18 @@ public class WrapZone : MonoBehaviour {
 		if(tracker != null) {
 			hit.Remove(col);
 			tracker.ExitZone();
-			if(col.transform.position.x < transform.position.x - triggerDimensions.x/2) {
+			
+			if(col.transform.position.x - 1 <= transform.position.x  - triggerDimensions.x/2) {
 				col.gameObject.transform.position += new Vector3(triggerDimensions.x, 0);
-			} else if(col.transform.position.x > transform.position.x + triggerDimensions.y/2) {
+			} else if(col.transform.position.x + 1 >= transform.position.x + triggerDimensions.y/2) {
 				col.gameObject.transform.position += new Vector3(-triggerDimensions.x, 0);
 			}
-			if(col.transform.position.y < transform.position.y - triggerDimensions.y/2) {
+			if(col.transform.position.y - 1 <= transform.position.y - triggerDimensions.y/2) {
 				col.gameObject.transform.position += new Vector3(0, triggerDimensions.y);
-			} else if(col.transform.position.y > transform.position.y + triggerDimensions.y/2) {
+			} else if(col.transform.position.y + 1 >= transform.position.y + triggerDimensions.y/2) {
 				col.gameObject.transform.position += new Vector3(0, -triggerDimensions.y);
 			}
+			
 		}
 	}
 }

@@ -31,7 +31,7 @@ public class Projectile : MonoBehaviour {
             for(int i = 0; i < damageEffects.Length; i++) {
                 damageEffects[i].Damage(other.gameObject);
             }
-            if(!passthrough) {
+            if(!passthrough && !other.GetComponent<Projectile>()) {
                 lifetime = 0;
             }
         }

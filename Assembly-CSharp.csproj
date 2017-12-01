@@ -51,12 +51,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Interceptor.cs" />
+     <Compile Include="Assets\Activator.cs" />
+     <Compile Include="Assets\ForwardDrive.cs" />
+     <Compile Include="Assets\Hexplosion.cs" />
      <Compile Include="Assets\Packages\2D Array\ArrayLayoutTest.cs" />
      <Compile Include="Assets\Packages\2D Array\GridLayout.cs" />
      <Compile Include="Assets\Scripts\AngledGravity.cs" />
      <Compile Include="Assets\Scripts\Asteroid.cs" />
      <Compile Include="Assets\Scripts\Battery.cs" />
+     <Compile Include="Assets\Scripts\CollisionDamage.cs" />
      <Compile Include="Assets\Scripts\ControlSet.cs" />
      <Compile Include="Assets\Scripts\Damageable.cs" />
      <Compile Include="Assets\Scripts\Decelerator.cs" />
@@ -87,12 +90,15 @@
      <Compile Include="Assets\Scripts\IDevice.cs" />
      <Compile Include="Assets\Scripts\IDrive.cs" />
      <Compile Include="Assets\Scripts\IHitEffect.cs" />
+     <Compile Include="Assets\Scripts\Impact.cs" />
+     <Compile Include="Assets\Scripts\Interceptor.cs" />
      <Compile Include="Assets\Scripts\IOnObjectDestroyed.cs" />
      <Compile Include="Assets\Scripts\IReactor.cs" />
      <Compile Include="Assets\Scripts\IWeapon.cs" />
      <Compile Include="Assets\Scripts\KeypadWeaponGUI.cs" />
      <Compile Include="Assets\Scripts\Lifetime.cs" />
      <Compile Include="Assets\Scripts\Motor.cs" />
+     <Compile Include="Assets\Scripts\MultiFollower.cs" />
      <Compile Include="Assets\Scripts\ObjectTagSet.cs" />
      <Compile Include="Assets\Scripts\ObjectTrail.cs" />
      <Compile Include="Assets\Scripts\OrbitVelocity.cs" />
@@ -107,7 +113,10 @@
      <Compile Include="Assets\Scripts\ScenePlay.cs" />
      <Compile Include="Assets\Scripts\Screenshot.cs" />
      <Compile Include="Assets\Scripts\SelfDestruct.cs" />
+     <Compile Include="Assets\Scripts\Shield.cs" />
+     <Compile Include="Assets\Scripts\ShieldSegment.cs" />
      <Compile Include="Assets\Scripts\SimpleHit.cs" />
+     <Compile Include="Assets\Scripts\SimpleShipAI.cs" />
      <Compile Include="Assets\Scripts\SimpleTrail.cs" />
      <Compile Include="Assets\Scripts\Spiral.cs" />
      <Compile Include="Assets\Scripts\SpriteFade.cs" />
@@ -120,11 +129,10 @@
      <Compile Include="Assets\Scripts\VideoCaptureExample.cs" />
      <Compile Include="Assets\Scripts\Weapon.cs" />
      <Compile Include="Assets\Scripts\WeaponTimer.cs" />
-     <Compile Include="Assets\Shield.cs" />
-     <Compile Include="Assets\ShieldSegment.cs" />
-     <Compile Include="Assets\SimpleShipAI.cs" />
-     <Compile Include="Assets\WrapWall.cs" />
-     <Compile Include="Assets\WrapZone.cs" />
+     <Compile Include="Assets\Scripts\WrapWall.cs" />
+     <Compile Include="Assets\Scripts\WrapZone.cs" />
+     <Compile Include="Assets\SimpleWrapZone.cs" />
+     <Compile Include="Assets\SpriteGrow.cs" />
      <None Include="Assets\Scripts\Organization.txt" />
      <None Include="Assets\todo.txt" />
  <Reference Include="UnityEngine.UI">
