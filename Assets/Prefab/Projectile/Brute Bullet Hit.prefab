@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ba0b3c815186994784d753bbd312d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growRate: 1
+  growRate: 0.2
 --- !u!114 &114923738129584762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startOpacity: 255
-  lifespan: 6
+  lifespan: 9
 --- !u!212 &212164829396758658
 SpriteRenderer:
   m_ObjectHideFlags: 1

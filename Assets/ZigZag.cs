@@ -2,23 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Oscillate : MonoBehaviour {
-    public float turnRate;
+public class ZigZag : MonoBehaviour {
     public int tick = 0;
-    public int halfPeriod;
+	public int turnAngle;
+    public int turnInterval;
     public Direction turnDirection;
     public float angledSpeed;
 	void Update () {
-        if(turnDirection == Direction.LEFT) {
-            Turn(turnRate);
-        } else if(turnDirection == Direction.RIGHT) {
-            Turn(-turnRate);
-        }
-
         tick++;
-        if(tick >= halfPeriod) {
+        if(tick >= turnInterval) {
             tick = 0;
             ToggleDirection();
+			if(turnDirection == Direction.LEFT) {
+				Turn(turnAngle);
+			} else if(turnDirection == Direction.RIGHT) {
+				Turn(-turnAngle);
+			}
         }
 	}
     private void Turn(float degrees) {
@@ -29,6 +28,7 @@ public class Oscillate : MonoBehaviour {
         //velocityAngle = Mathf.Atan2(velocity.y, velocity.x);
         velocity += Helper.PolarOffset2(velocityAngle + degrees, angledSpeed);
         rb.velocity = velocity;
+		transform.eulerAngles = new Vector3(0, 0, velocityAngle + 90);
     }
     private void ToggleDirection() {
         if (turnDirection == Direction.LEFT)
@@ -37,7 +37,3 @@ public class Oscillate : MonoBehaviour {
             turnDirection = Direction.LEFT;
     }
 }
-public enum Direction {
-        LEFT,
-        RIGHT
-    }

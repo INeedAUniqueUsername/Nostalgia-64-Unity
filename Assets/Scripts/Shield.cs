@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Shield : MonoBehaviour {
+	public float radius;
 	public int segmentCount;
 	public float segmentSpan;
-	public Sprite segmentSprite;
-	public float radius;
 	private List<Transform> segments;
 	public int segmentCreateTime;
 	private int segmentCreateTimeLeft;
 	public double segmentMaxHP;
 	public double segmentRegenRate;
+	public Sprite segmentSprite;
 	void Start() {
 		segments = new List<Transform>(segmentCount);
 		for(int i = 0; i < segmentCount; i++) {
@@ -63,5 +63,17 @@ public class Shield : MonoBehaviour {
 			}
 		}
 		segmentCreateTimeLeft = segmentCreateTime;
+	}
+	void OnDrawGizmosSelected() {
+		int centerSegmentIndex = segmentCount/2;
+		for(int i = 0; i < segmentCount; i++) {
+			float angleOffset = (i - centerSegmentIndex) * segmentSpan;
+			Gizmos.color = Color.white;
+			Vector3 endPoint = transform.position + Helper.PolarOffset3(angleOffset, radius);
+			//Gizmos.DrawLine(transform.position, endPoint);
+			float arcLength = radius * segmentSpan * Mathf.Deg2Rad;
+			Gizmos.DrawLine(endPoint, endPoint + Helper.PolarOffset3(angleOffset + 90, arcLength/2));
+			Gizmos.DrawLine(endPoint, endPoint + Helper.PolarOffset3(angleOffset - 90, arcLength/2));
+		}
 	}
 }

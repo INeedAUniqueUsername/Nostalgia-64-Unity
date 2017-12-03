@@ -29,6 +29,9 @@ public class Weapon : MonoBehaviour, IUsable, IWeapon
         Vector3 velocity = new Vector3(rb.velocity.x, rb.velocity.y) + Helper.PolarOffset3(fireAngle, projectileSpeed);
         //shot.GetComponent<Rigidbody2D>().velocity = velocity + Helper.RotatePointAroundOrigin(projectileVelocity, new Vector3(0, 0, fireAngle));
         shot.GetComponent<Rigidbody2D>().velocity = velocity;
+        foreach(IOnFireWeapon onFireWeapon in GetComponents<IOnFireWeapon>()) {
+            onFireWeapon.OnFireWeapon();
+        }
     }
     void Start() {
     }

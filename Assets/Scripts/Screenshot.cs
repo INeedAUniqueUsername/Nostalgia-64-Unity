@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Screenshot : MonoBehaviour {
-	// Update is called once per frame
+	public int multiplier = 1;
 	void Update () {
 		if(Input.GetKey(KeyCode.P)) {
-            ScreenCapture.CaptureScreenshot("png", 1);
+            ScreenCapture.CaptureScreenshot("capture.png", multiplier);
         }
 	}
 }
