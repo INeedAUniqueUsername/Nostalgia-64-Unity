@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4662467270502344}
   - component: {fileID: 114462620116370408}
-  - component: {fileID: 114307784863378254}
   - component: {fileID: 50113207381606282}
   - component: {fileID: 212579070313966204}
   - component: {fileID: 60376451043320978}
@@ -29,6 +28,7 @@ GameObject:
   - component: {fileID: 114481508181449576}
   - component: {fileID: 114670404726689248}
   - component: {fileID: 114055446740319610}
+  - component: {fileID: 114154338743894470}
   m_Layer: 0
   m_Name: Zig Beam (Right)
   m_TagString: Projectile
@@ -117,6 +117,18 @@ MonoBehaviour:
   turnInterval: 2
   turnDirection: 0
   angledSpeed: 20
+--- !u!114 &114154338743894470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1832894914929842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dcd977fb0934c459fa527288c349dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 30
 --- !u!114 &114211670984887306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,22 +142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 21300000, guid: 3ab775d053bc24a48a8c269162b8461b, type: 3}
   lifetime: 24
---- !u!114 &114307784863378254
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1832894914929842}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f7bbfa301180848b86bf7f6df0cf63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 0.35
-  height: 0.05
-  depth: 1
-  lineSize: 0.02
-  shape: {fileID: 4281779809574824, guid: ed860d1cf8fb0c247890e89d77bfd7fb, type: 2}
 --- !u!114 &114462620116370408
 MonoBehaviour:
   m_ObjectHideFlags: 1

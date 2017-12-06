@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4818441078008278}
   - component: {fileID: 114144686803217800}
-  - component: {fileID: 114062311906776918}
   - component: {fileID: 50671471302209492}
   - component: {fileID: 212340928011159678}
   - component: {fileID: 60839236792832160}
@@ -28,6 +27,7 @@ GameObject:
   - component: {fileID: 114036695534195008}
   - component: {fileID: 114405417722970710}
   - component: {fileID: 114601833739610414}
+  - component: {fileID: 114213586291952774}
   m_Layer: 0
   m_Name: Courier III Turret Beam
   m_TagString: Projectile
@@ -113,22 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 21300000, guid: 3ab775d053bc24a48a8c269162b8461b, type: 3}
   lifetime: 24
---- !u!114 &114062311906776918
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1874078414330676}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f7bbfa301180848b86bf7f6df0cf63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 0.35
-  height: 0.05
-  depth: 1
-  lineSize: 0.02
-  shape: {fileID: 4281779809574824, guid: ed860d1cf8fb0c247890e89d77bfd7fb, type: 2}
 --- !u!114 &114144686803217800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,6 +128,18 @@ MonoBehaviour:
   owner: {fileID: 0}
   passthrough: 0
   canHit: 05000000
+--- !u!114 &114213586291952774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1874078414330676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dcd977fb0934c459fa527288c349dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 30
 --- !u!114 &114323180895314840
 MonoBehaviour:
   m_ObjectHideFlags: 1

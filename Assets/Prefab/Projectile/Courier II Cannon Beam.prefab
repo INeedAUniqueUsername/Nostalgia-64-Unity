@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4333375692597336}
   - component: {fileID: 114239647294682678}
-  - component: {fileID: 114832416678433538}
   - component: {fileID: 50416535942932286}
   - component: {fileID: 212406999554430766}
   - component: {fileID: 60572905996135444}
@@ -28,6 +27,7 @@ GameObject:
   - component: {fileID: 114971051261701444}
   - component: {fileID: 114424191397132504}
   - component: {fileID: 114537490840552286}
+  - component: {fileID: 114634845221993888}
   m_Layer: 0
   m_Name: Courier II Cannon Beam
   m_TagString: Projectile
@@ -148,22 +148,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tags: 04000000
---- !u!114 &114832416678433538
+--- !u!114 &114634845221993888
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1619044463803482}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f7bbfa301180848b86bf7f6df0cf63, type: 3}
+  m_Script: {fileID: 11500000, guid: f0dcd977fb0934c459fa527288c349dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 0.3
-  height: 0.03
-  depth: 1
-  lineSize: 0.02
-  shape: {fileID: 4281779809574824, guid: ed860d1cf8fb0c247890e89d77bfd7fb, type: 2}
+  delay: 30
 --- !u!114 &114971051261701444
 MonoBehaviour:
   m_ObjectHideFlags: 1

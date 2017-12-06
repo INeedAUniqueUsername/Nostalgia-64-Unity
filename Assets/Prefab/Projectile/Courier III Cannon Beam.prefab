@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4120023120129236}
   - component: {fileID: 114155027883863580}
-  - component: {fileID: 114188670873005986}
   - component: {fileID: 50176141033984866}
   - component: {fileID: 212642368579088592}
   - component: {fileID: 60156477855881336}
@@ -28,6 +27,7 @@ GameObject:
   - component: {fileID: 114393463404772216}
   - component: {fileID: 114218492230820196}
   - component: {fileID: 114837335031537620}
+  - component: {fileID: 114236315308928870}
   m_Layer: 0
   m_Name: Courier III Cannon Beam
   m_TagString: Projectile
@@ -111,22 +111,6 @@ MonoBehaviour:
   owner: {fileID: 0}
   passthrough: 0
   canHit: 05000000
---- !u!114 &114188670873005986
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704461911448750}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f7bbfa301180848b86bf7f6df0cf63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 0.3
-  height: 0.03
-  depth: 1
-  lineSize: 0.02
-  shape: {fileID: 4281779809574824, guid: ed860d1cf8fb0c247890e89d77bfd7fb, type: 2}
 --- !u!114 &114218492230820196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,6 +123,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+--- !u!114 &114236315308928870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1704461911448750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dcd977fb0934c459fa527288c349dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 30
 --- !u!114 &114369056032141372
 MonoBehaviour:
   m_ObjectHideFlags: 1

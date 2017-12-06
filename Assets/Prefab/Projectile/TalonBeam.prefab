@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4286444127664674}
   - component: {fileID: 114681395990399206}
-  - component: {fileID: 114345656705693532}
   - component: {fileID: 50170057582710498}
   - component: {fileID: 212647335814422494}
   - component: {fileID: 60100676225797338}
@@ -30,6 +29,7 @@ GameObject:
   - component: {fileID: 198478251450483590}
   - component: {fileID: 114314677752244334}
   - component: {fileID: 114904902332260866}
+  - component: {fileID: 114839943351804580}
   m_Layer: 0
   m_Name: SerifBeam
   m_TagString: Projectile
@@ -124,22 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
---- !u!114 &114345656705693532
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1432090418910888}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f7bbfa301180848b86bf7f6df0cf63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 0.3
-  height: 0.03
-  depth: 1
-  lineSize: 0.02
-  shape: {fileID: 4281779809574824, guid: ed860d1cf8fb0c247890e89d77bfd7fb, type: 2}
 --- !u!114 &114453420317084990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +151,18 @@ MonoBehaviour:
   owner: {fileID: 0}
   passthrough: 0
   canHit: 0500000004000000
+--- !u!114 &114839943351804580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432090418910888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dcd977fb0934c459fa527288c349dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 30
 --- !u!114 &114904902332260866
 MonoBehaviour:
   m_ObjectHideFlags: 1

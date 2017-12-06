@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114964895174149818}
   - component: {fileID: 114631726322404344}
   - component: {fileID: 114054487751788766}
+  - component: {fileID: 114786560163079564}
   m_Layer: 0
   m_Name: SpiralBeam
   m_TagString: Projectile
@@ -172,6 +173,18 @@ MonoBehaviour:
   owner: {fileID: 0}
   passthrough: 0
   canHit: 05000000
+--- !u!114 &114786560163079564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470589287202702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dcd977fb0934c459fa527288c349dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 30
 --- !u!114 &114808818970013386
 MonoBehaviour:
   m_ObjectHideFlags: 1

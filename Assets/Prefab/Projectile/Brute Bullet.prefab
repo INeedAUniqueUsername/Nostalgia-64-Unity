@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4418592028988730}
   - component: {fileID: 114563818355960736}
-  - component: {fileID: 114226412872183592}
   - component: {fileID: 50579893409417094}
   - component: {fileID: 212807857147260266}
   - component: {fileID: 60101825777392062}
@@ -31,6 +30,7 @@ GameObject:
   - component: {fileID: 114405010448681848}
   - component: {fileID: 114380468461457870}
   - component: {fileID: 114636328609459948}
+  - component: {fileID: 114564891598698010}
   m_Layer: 0
   m_Name: Brute Bullet
   m_TagString: Projectile
@@ -123,22 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tags: 05000000
---- !u!114 &114226412872183592
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1104308800598568}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f7bbfa301180848b86bf7f6df0cf63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 0.3
-  height: 0.03
-  depth: 1
-  lineSize: 0.02
-  shape: {fileID: 4281779809574824, guid: ed860d1cf8fb0c247890e89d77bfd7fb, type: 2}
 --- !u!114 &114380468461457870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,6 +163,18 @@ MonoBehaviour:
   owner: {fileID: 0}
   passthrough: 0
   canHit: 0500000004000000
+--- !u!114 &114564891598698010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104308800598568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dcd977fb0934c459fa527288c349dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 30
 --- !u!114 &114636328609459948
 MonoBehaviour:
   m_ObjectHideFlags: 1

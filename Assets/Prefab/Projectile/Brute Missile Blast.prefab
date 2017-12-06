@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114456372595859752}
   - component: {fileID: 114495376892282286}
   - component: {fileID: 114250624384948982}
+  - component: {fileID: 114769422177194510}
   m_Layer: 0
   m_Name: Brute Missile Blast
   m_TagString: Projectile
@@ -177,6 +178,18 @@ MonoBehaviour:
   owner: {fileID: 0}
   passthrough: 1
   canHit: 05000000
+--- !u!114 &114769422177194510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119378313243846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dcd977fb0934c459fa527288c349dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 30
 --- !u!212 &212188708584264696
 SpriteRenderer:
   m_ObjectHideFlags: 1

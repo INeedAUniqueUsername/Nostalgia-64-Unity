@@ -463,13 +463,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c982e7502f182674f9110954077fdce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 0.8
   segmentCount: 3
   segmentSpan: 30
-  segmentSprite: {fileID: 21300000, guid: bc3ed269f28e4a04bbd7251b7a81f74a, type: 3}
-  radius: 0.8
   segmentCreateTime: 180
   segmentMaxHP: 30
   segmentRegenRate: 0.2
+  segmentSprite: {fileID: 21300000, guid: bc3ed269f28e4a04bbd7251b7a81f74a, type: 3}
 --- !u!114 &114263753646507470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -712,7 +712,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1478398157
+  randomSeed: -1228381319
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -1272,7 +1272,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2

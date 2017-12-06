@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4957843375313168}
   - component: {fileID: 114302298611827730}
-  - component: {fileID: 114192245680292290}
   - component: {fileID: 50466349138626608}
   - component: {fileID: 212964392334578736}
   - component: {fileID: 60908029762369332}
@@ -29,6 +28,7 @@ GameObject:
   - component: {fileID: 114850308873751754}
   - component: {fileID: 114991124123770952}
   - component: {fileID: 114416519672200438}
+  - component: {fileID: 114491300450720878}
   m_Layer: 0
   m_Name: Zig Beam (Left)
   m_TagString: Projectile
@@ -101,22 +101,6 @@ PolygonCollider2D:
       - {x: 0.19, y: 0.005}
       - {x: -0.19, y: 0.005}
       - {x: -0.19, y: -0.005}
---- !u!114 &114192245680292290
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1789892089871278}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f7bbfa301180848b86bf7f6df0cf63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 0.35
-  height: 0.05
-  depth: 1
-  lineSize: 0.02
-  shape: {fileID: 4281779809574824, guid: ed860d1cf8fb0c247890e89d77bfd7fb, type: 2}
 --- !u!114 &114302298611827730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,6 +132,18 @@ MonoBehaviour:
   turnInterval: 2
   turnDirection: 1
   angledSpeed: 20
+--- !u!114 &114491300450720878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789892089871278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dcd977fb0934c459fa527288c349dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 30
 --- !u!114 &114559673181149216
 MonoBehaviour:
   m_ObjectHideFlags: 1

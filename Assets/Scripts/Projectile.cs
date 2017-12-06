@@ -21,7 +21,7 @@ public class Projectile : MonoBehaviour {
         if(lifetime == 0) {
             return;
         }
-        if (!Helper.isRelated(owner, other.transform) && matchesCriteria(other.gameObject)) {
+        if ((owner == null || !Helper.isRelated(owner, other.transform)) && matchesCriteria(other.gameObject)) {
             print("Hit " + other.name);
             IHitEffect[] hitEffects = GetComponents<IHitEffect>();
             for(int i = 0; i < hitEffects.Length; i++) {
@@ -37,6 +37,12 @@ public class Projectile : MonoBehaviour {
         }
     }
     bool matchesCriteria(GameObject other) {
+        foreach(IHitCriterion criterion in GetComponents<IHitCriterion>()) {
+            if(!criterion.Matches(other)) {
+                return false;
+            }
+        }
+
         ObjectTagSet t = other.GetComponent<ObjectTagSet>();
         if(t) {
             List<ObjectTag> tagList = t.tags;
@@ -47,7 +53,11 @@ public class Projectile : MonoBehaviour {
             }
             return false;
         } else {
-            return false;
+            if(canHit.Length == 0) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }

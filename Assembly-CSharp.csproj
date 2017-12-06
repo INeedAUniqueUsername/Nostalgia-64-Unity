@@ -51,13 +51,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Activator.cs" />
-     <Compile Include="Assets\ForwardDrive.cs" />
-     <Compile Include="Assets\Hexplosion.cs" />
+     <Compile Include="Assets\DeviceHitCriterion.cs" />
+     <Compile Include="Assets\HitAttach.cs" />
+     <Compile Include="Assets\HomingHack.cs" />
+     <Compile Include="Assets\IHitCriterion.cs" />
      <Compile Include="Assets\Packages\2D Array\ArrayLayoutTest.cs" />
      <Compile Include="Assets\Packages\2D Array\GridLayout.cs" />
+     <Compile Include="Assets\ParentActivator.cs" />
+     <Compile Include="Assets\ScaleOscillate.cs" />
+     <Compile Include="Assets\Scripts\Activator.cs" />
      <Compile Include="Assets\Scripts\AngledGravity.cs" />
      <Compile Include="Assets\Scripts\Asteroid.cs" />
+     <Compile Include="Assets\Scripts\AutoClearProjectileOwner.cs" />
      <Compile Include="Assets\Scripts\Battery.cs" />
      <Compile Include="Assets\Scripts\CollisionDamage.cs" />
      <Compile Include="Assets\Scripts\ControlSet.cs" />
@@ -76,10 +81,12 @@
      <Compile Include="Assets\Scripts\DeviceController.cs" />
      <Compile Include="Assets\Scripts\Drive.cs" />
      <Compile Include="Assets\Scripts\Follower.cs" />
+     <Compile Include="Assets\Scripts\ForwardDrive.cs" />
      <Compile Include="Assets\Scripts\FragmentExplosion.cs" />
      <Compile Include="Assets\Scripts\Gravity.cs" />
      <Compile Include="Assets\Scripts\Helper.cs" />
      <Compile Include="Assets\Scripts\HexGrid.cs" />
+     <Compile Include="Assets\Scripts\Hexplosion.cs" />
      <Compile Include="Assets\Scripts\HexRandom.cs" />
      <Compile Include="Assets\Scripts\HexSpiral.cs" />
      <Compile Include="Assets\Scripts\HitEffect.cs" />
@@ -91,7 +98,7 @@
      <Compile Include="Assets\Scripts\IDrive.cs" />
      <Compile Include="Assets\Scripts\IHitEffect.cs" />
      <Compile Include="Assets\Scripts\Impact.cs" />
-     <Compile Include="Assets\Scripts\Interceptor.cs" />
+     <Compile Include="Assets\Scripts\IOnFireWeapon.cs" />
      <Compile Include="Assets\Scripts\IOnObjectDestroyed.cs" />
      <Compile Include="Assets\Scripts\IReactor.cs" />
      <Compile Include="Assets\Scripts\IWeapon.cs" />
@@ -108,6 +115,7 @@
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\ProjectileTrail.cs" />
      <Compile Include="Assets\Scripts\Reactor.cs" />
+     <Compile Include="Assets\Scripts\Recoil.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\ScenePlay.cs" />
@@ -116,14 +124,19 @@
      <Compile Include="Assets\Scripts\Shield.cs" />
      <Compile Include="Assets\Scripts\ShieldSegment.cs" />
      <Compile Include="Assets\Scripts\SimpleHit.cs" />
+     <Compile Include="Assets\Scripts\SimpleMissileInterceptor.cs" />
      <Compile Include="Assets\Scripts\SimpleShipAI.cs" />
      <Compile Include="Assets\Scripts\SimpleTrail.cs" />
+     <Compile Include="Assets\Scripts\SimpleWrapZone.cs" />
      <Compile Include="Assets\Scripts\Spiral.cs" />
      <Compile Include="Assets\Scripts\SpriteFade.cs" />
+     <Compile Include="Assets\Scripts\SpriteGrow.cs" />
      <Compile Include="Assets\Scripts\SpriteScale.cs" />
      <Compile Include="Assets\Scripts\SpriteVibrate.cs" />
      <Compile Include="Assets\Scripts\Swivel.cs" />
+     <Compile Include="Assets\Scripts\SwivelMissileInterceptor.cs" />
      <Compile Include="Assets\Scripts\Tractor.cs" />
+     <Compile Include="Assets\Scripts\TransparentBackgroundScreenshotRecorder.cs" />
      <Compile Include="Assets\Scripts\Turret_Mouse.cs" />
      <Compile Include="Assets\Scripts\Turret_Reticle.cs" />
      <Compile Include="Assets\Scripts\VideoCaptureExample.cs" />
@@ -131,8 +144,7 @@
      <Compile Include="Assets\Scripts\WeaponTimer.cs" />
      <Compile Include="Assets\Scripts\WrapWall.cs" />
      <Compile Include="Assets\Scripts\WrapZone.cs" />
-     <Compile Include="Assets\SimpleWrapZone.cs" />
-     <Compile Include="Assets\SpriteGrow.cs" />
+     <Compile Include="Assets\Scripts\ZigZag.cs" />
      <None Include="Assets\Scripts\Organization.txt" />
      <None Include="Assets\todo.txt" />
  <Reference Include="UnityEngine.UI">

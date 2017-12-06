@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4329074505587336}
   - component: {fileID: 114041364079910384}
-  - component: {fileID: 114908683741276604}
   - component: {fileID: 50871074352668478}
   - component: {fileID: 212753488693514582}
   - component: {fileID: 60964645372597628}
@@ -28,6 +27,7 @@ GameObject:
   - component: {fileID: 114589177506686324}
   - component: {fileID: 114360365492033484}
   - component: {fileID: 114618741980341788}
+  - component: {fileID: 114062877488726862}
   m_Layer: 0
   m_Name: Courier I Cannon Beam
   m_TagString: Projectile
@@ -111,6 +111,18 @@ MonoBehaviour:
   owner: {fileID: 0}
   passthrough: 0
   canHit: 05000000
+--- !u!114 &114062877488726862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1657459863574358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dcd977fb0934c459fa527288c349dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 30
 --- !u!114 &114360365492033484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -161,22 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interval: 1
   lifetime: 4
---- !u!114 &114908683741276604
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1657459863574358}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f7bbfa301180848b86bf7f6df0cf63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 0.3
-  height: 0.03
-  depth: 1
-  lineSize: 0.02
-  shape: {fileID: 4281779809574824, guid: ed860d1cf8fb0c247890e89d77bfd7fb, type: 2}
 --- !u!212 &212753488693514582
 SpriteRenderer:
   m_ObjectHideFlags: 1

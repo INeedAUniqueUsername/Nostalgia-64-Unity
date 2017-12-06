@@ -19,17 +19,16 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4879777207856476}
-  - component: {fileID: 114849998432482100}
   - component: {fileID: 114095017579315864}
   - component: {fileID: 50153316726869832}
   - component: {fileID: 212020964370848500}
   - component: {fileID: 60877778135026830}
-  - component: {fileID: 114766073500909270}
-  - component: {fileID: 114536965581186658}
   - component: {fileID: 114567380377016898}
   - component: {fileID: 114614633994523110}
+  - component: {fileID: 114825070284826988}
+  - component: {fileID: 114832123886720142}
   m_Layer: 0
-  m_Name: SerifExhaust
+  m_Name: GreenhornExhaust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 45
   owner: {fileID: 0}
-  passthrough: 0
+  passthrough: 1
   canHit: 05000000
 --- !u!114 &114151522447757254
 MonoBehaviour:
@@ -155,18 +154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startOpacity: 255
   lifespan: 6
---- !u!114 &114536965581186658
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1428358767987210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88ad344fd0ce061419866b91a961f781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
 --- !u!114 &114567380377016898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,35 +178,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tags: 
---- !u!114 &114766073500909270
+--- !u!114 &114825070284826988
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1428358767987210}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 332634633f3477b4d9427beaf073c21f, type: 3}
+  m_Script: {fileID: 11500000, guid: 87b76e77c10ea9d43a4c18c480afb147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 4328555022737610}
-  interval: 1
---- !u!114 &114849998432482100
+  force: 6
+--- !u!114 &114832123886720142
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1428358767987210}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f7bbfa301180848b86bf7f6df0cf63, type: 3}
+  m_Script: {fileID: 11500000, guid: 81c3ada299028314798c1e80a1a74b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 0.06
-  height: 0.2
-  depth: 1
-  lineSize: 0.02
-  shape: {fileID: 4741208680447054, guid: bdd4e2ecf354f7443b16b7d48f9d8319, type: 2}
+  startOpacity: 255
+  lifespan: 45
 --- !u!212 &212020964370848500
 SpriteRenderer:
   m_ObjectHideFlags: 1

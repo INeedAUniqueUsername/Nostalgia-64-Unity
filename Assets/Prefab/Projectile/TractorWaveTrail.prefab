@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114286048242549842}
   - component: {fileID: 114480989019320758}
   - component: {fileID: 114609706361819166}
+  - component: {fileID: 114099879738914226}
   m_Layer: 0
   m_Name: TractorWaveTrail
   m_TagString: Projectile
@@ -95,6 +96,18 @@ PolygonCollider2D:
       - {x: -0.31, y: -0.04}
       - {x: 0.32999998, y: -0.04}
       - {x: 0.32999998, y: 0.04}
+--- !u!114 &114099879738914226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1559995446770834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dcd977fb0934c459fa527288c349dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 30
 --- !u!114 &114286048242549842
 MonoBehaviour:
   m_ObjectHideFlags: 1
