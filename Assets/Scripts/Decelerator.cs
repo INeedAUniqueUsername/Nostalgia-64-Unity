@@ -11,10 +11,11 @@ public class Decelerator : MonoBehaviour, IUsable {
     public void Decelerate() {
         Rigidbody2D rb = transform.parent.GetComponent<Rigidbody2D>();
         Vector2 velocity = rb.velocity;
+        float angle = Mathf.Atan2(velocity.y, velocity.x);
         float x = velocity.x;
-        float xInc = Mathf.Min(Mathf.Abs(x), linearSpeedInc);
+        float xInc = Mathf.Min(Mathf.Abs(x), Mathf.Abs(linearSpeedInc * Mathf.Cos(angle)));
         float y = velocity.y;
-        float yInc = Mathf.Min(Mathf.Abs(y), linearSpeedInc);
+        float yInc = Mathf.Min(Mathf.Abs(y), Mathf.Abs(linearSpeedInc * Mathf.Sin(angle)));
         if (x < 0)
             x += xInc;
         else if (x > 0)
