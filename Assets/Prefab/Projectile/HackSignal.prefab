@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 50125522840940328}
   - component: {fileID: 114904869760846336}
   m_Layer: 0
-  m_Name: EagleHack
+  m_Name: HackSignal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,7 +10,9 @@ public class HomingHack : MonoBehaviour {
 			Vector2 posDiff = target.position - transform.position;
 			Rigidbody2D rb = GetComponent<Rigidbody2D>();
 			float speed = rb.velocity.magnitude;
-			float angle = Mathf.Atan2(posDiff.y, posDiff.x) * Mathf.Rad2Deg;
+			//float angle = Mathf.Atan2(posDiff.y, posDiff.x) * Mathf.Rad2Deg;
+			Vector2 vel = Helper.CalcInterceptShotVelocity(posDiff, Helper.getRootParent(target).GetComponent<Rigidbody2D>().velocity, speed);
+			float angle = Mathf.Atan2(vel.y, vel.x) * Mathf.Rad2Deg;
 			rb.velocity = Helper.PolarOffset2(angle, speed);
 		} else {
 			Transform owner = null;

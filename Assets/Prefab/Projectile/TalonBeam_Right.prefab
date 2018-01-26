@@ -32,7 +32,7 @@ GameObject:
   - component: {fileID: 114757871263514634}
   - component: {fileID: 114897892153602836}
   m_Layer: 0
-  m_Name: SerifBeam_Right
+  m_Name: TalonBeam_Right
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

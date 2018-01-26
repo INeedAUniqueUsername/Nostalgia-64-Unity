@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 20
-  speedScale: 0
+  speedScale: 1
 --- !u!114 &114563818355960736
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114825070284826988}
   - component: {fileID: 114832123886720142}
   m_Layer: 0
-  m_Name: GreenhornExhaust
+  m_Name: TalonExhaust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

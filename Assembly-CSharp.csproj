@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AutoRepair.cs" />
      <Compile Include="Assets\DeviceHitCriterion.cs" />
      <Compile Include="Assets\HitAttach.cs" />
      <Compile Include="Assets\HomingHack.cs" />
@@ -100,6 +101,7 @@
      <Compile Include="Assets\Scripts\Impact.cs" />
      <Compile Include="Assets\Scripts\IOnFireWeapon.cs" />
      <Compile Include="Assets\Scripts\IOnObjectDestroyed.cs" />
+     <Compile Include="Assets\Scripts\IOnProjectileHit.cs" />
      <Compile Include="Assets\Scripts\IReactor.cs" />
      <Compile Include="Assets\Scripts\IWeapon.cs" />
      <Compile Include="Assets\Scripts\KeypadWeaponGUI.cs" />
@@ -145,6 +147,7 @@
      <Compile Include="Assets\Scripts\WrapWall.cs" />
      <Compile Include="Assets\Scripts\WrapZone.cs" />
      <Compile Include="Assets\Scripts\ZigZag.cs" />
+     <Compile Include="Assets\SpeedOscillate.cs" />
      <None Include="Assets\Scripts\Organization.txt" />
      <None Include="Assets\todo.txt" />
  <Reference Include="UnityEngine.UI">

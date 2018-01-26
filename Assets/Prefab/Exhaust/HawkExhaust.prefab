@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 114837001638870076}
   - component: {fileID: 114452546563369970}
   m_Layer: 0
-  m_Name: EagleExhaust
+  m_Name: HawkExhaust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

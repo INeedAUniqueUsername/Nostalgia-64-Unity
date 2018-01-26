@@ -31,7 +31,7 @@ GameObject:
   - component: {fileID: 114904902332260866}
   - component: {fileID: 114839943351804580}
   m_Layer: 0
-  m_Name: SerifBeam
+  m_Name: TalonBeam
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,11 +94,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.32999998, y: 0.04}
-      - {x: -0.32999998, y: -0.01}
-      - {x: -0.31, y: -0.04}
-      - {x: 0.32999998, y: -0.04}
-      - {x: 0.32999998, y: 0.04}
+    - - {x: -0.03, y: 0.03}
+      - {x: -0.03, y: -0.03}
+      - {x: 0.03, y: -0.03}
+      - {x: 0.03, y: 0.03}
 --- !u!114 &114153621287615076
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -23,13 +23,14 @@ public class Projectile : MonoBehaviour {
         }
         if ((owner == null || !Helper.isRelated(owner, other.transform)) && matchesCriteria(other.gameObject)) {
             print("Hit " + other.name);
-            IHitEffect[] hitEffects = GetComponents<IHitEffect>();
-            for(int i = 0; i < hitEffects.Length; i++) {
-                hitEffects[i].CreateEffect(GetComponent<Collider2D>().bounds.ClosestPoint(other.bounds.center));
+            foreach(IOnProjectileHit projectileHitEvent in other.GetComponents<IOnProjectileHit>()) {
+                projectileHitEvent.OnHit(transform);
             }
-            IDamage[] damageEffects = GetComponents<IDamage>();
-            for(int i = 0; i < damageEffects.Length; i++) {
-                damageEffects[i].Damage(other.gameObject);
+            foreach(IHitEffect hitEffect in GetComponents<IHitEffect>()) {
+                hitEffect.CreateEffect(GetComponent<Collider2D>().bounds.ClosestPoint(other.bounds.center));
+            }
+            foreach(IDamage damageEffect in GetComponents<IDamage>()) {
+                damageEffect.Damage(other.gameObject);
             }
             if(!passthrough && !other.GetComponent<Projectile>()) {
                 lifetime = 0;
