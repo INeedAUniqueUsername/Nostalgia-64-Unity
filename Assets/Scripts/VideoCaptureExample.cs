@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Linq;
-using UnityEngine.VR.WSA.WebCam;
+
 
 public class VideoCaptureExample : MonoBehaviour {
-    VideoCapture m_VideoCapture = null;
+    UnityEngine.XR.WSA.WebCam.VideoCapture m_VideoCapture = null;
     float m_stopRecordingTimer = float.MaxValue;
 
     // Use this for initialization
@@ -25,26 +25,26 @@ public class VideoCaptureExample : MonoBehaviour {
 
     void StartVideoCaptureTest() {
 
-        Resolution cameraResolution = VideoCapture.SupportedResolutions.OrderByDescending((res) => res.width * res.height).First();
+        Resolution cameraResolution = UnityEngine.XR.WSA.WebCam.VideoCapture.SupportedResolutions.OrderByDescending((res) => res.width * res.height).First();
         Debug.Log(cameraResolution);
 
-        float cameraFramerate = VideoCapture.GetSupportedFrameRatesForResolution(cameraResolution).OrderByDescending((fps) => fps).First();
+        float cameraFramerate = UnityEngine.XR.WSA.WebCam.VideoCapture.GetSupportedFrameRatesForResolution(cameraResolution).OrderByDescending((fps) => fps).First();
         Debug.Log(cameraFramerate);
 
-        VideoCapture.CreateAsync(false, delegate (VideoCapture videoCapture) {
+        UnityEngine.XR.WSA.WebCam.VideoCapture.CreateAsync(false, delegate (UnityEngine.XR.WSA.WebCam.VideoCapture videoCapture) {
             if (videoCapture != null) {
                 m_VideoCapture = videoCapture;
                 Debug.Log("Created VideoCapture Instance!");
 
-                CameraParameters cameraParameters = new CameraParameters();
+                UnityEngine.XR.WSA.WebCam.CameraParameters cameraParameters = new UnityEngine.XR.WSA.WebCam.CameraParameters();
                 cameraParameters.hologramOpacity = 0.0f;
                 cameraParameters.frameRate = cameraFramerate;
                 cameraParameters.cameraResolutionWidth = cameraResolution.width;
                 cameraParameters.cameraResolutionHeight = cameraResolution.height;
-                cameraParameters.pixelFormat = CapturePixelFormat.BGRA32;
+                cameraParameters.pixelFormat = UnityEngine.XR.WSA.WebCam.CapturePixelFormat.BGRA32;
 
                 m_VideoCapture.StartVideoModeAsync(cameraParameters,
-                                                   VideoCapture.AudioState.ApplicationAndMicAudio,
+                                                   UnityEngine.XR.WSA.WebCam.VideoCapture.AudioState.ApplicationAndMicAudio,
                                                    OnStartedVideoCaptureMode);
             } else {
                 Debug.LogError("Failed to create VideoCapture Instance!");
@@ -52,7 +52,7 @@ public class VideoCaptureExample : MonoBehaviour {
         });
     }
 
-    void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result) {
+    void OnStartedVideoCaptureMode(UnityEngine.XR.WSA.WebCam.VideoCapture.VideoCaptureResult result) {
         Debug.Log("Started Video Capture Mode!");
         string timeStamp = Time.time.ToString().Replace(".", "").Replace(":", "");
         string filename = string.Format("TestVideo_{0}.mp4", timeStamp);
@@ -61,15 +61,15 @@ public class VideoCaptureExample : MonoBehaviour {
         m_VideoCapture.StartRecordingAsync(filepath, OnStartedRecordingVideo);
     }
 
-    void OnStoppedVideoCaptureMode(VideoCapture.VideoCaptureResult result) {
+    void OnStoppedVideoCaptureMode(UnityEngine.XR.WSA.WebCam.VideoCapture.VideoCaptureResult result) {
         Debug.Log("Stopped Video Capture Mode!");
     }
 
-    void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result) {
+    void OnStartedRecordingVideo(UnityEngine.XR.WSA.WebCam.VideoCapture.VideoCaptureResult result) {
         Debug.Log("Started Recording Video!");
     }
 
-    void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result) {
+    void OnStoppedRecordingVideo(UnityEngine.XR.WSA.WebCam.VideoCapture.VideoCaptureResult result) {
         Debug.Log("Stopped Recording Video!");
         m_VideoCapture.StopVideoModeAsync(OnStoppedVideoCaptureMode);
     }
