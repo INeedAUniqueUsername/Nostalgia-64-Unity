@@ -2,6 +2,8 @@
 
 ![](Nostalgia64UnityPreview.png)
 
-This project is the precursor to [Nostalgia 64 (Godot)](https://github.com/INeedAUniqueUsername/Nostalgia-64-Godot). I abandoned it because I ran out of ideas and I dislike Unity3D.
+This project is an experimental space action demp with cold, hard zero-gravity motion. An attempted Godot remake is available at [Nostalgia 64 (Godot)](https://github.com/INeedAUniqueUsername/Nostalgia-64-Godot).
 
-Since this project is older, it has had a lot more work done on it. Currently there are 8 unique ships - all of them fully implemented and functional. There is zero user interface implemented.
+Currently there are 8 unique ships - all of them fully implemented and functional. There is zero user interface implemented.
+
+Due to the difficulty of the gameplay, this game concept is not considered viable for further exploration.
